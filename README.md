@@ -1,6 +1,6 @@
 <div align = "center"> <img src="img/ELIXUER_White.svg" > </div>
 
-
+#
 
 <strong>Sobre:</strong> Venta de perfumes y fragancias
 
