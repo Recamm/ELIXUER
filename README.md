@@ -1,1 +1,1 @@
-# ELIXUER
+<div align = "center"> <img src="img/ELIXUER_White.svg" > </div>
