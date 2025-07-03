@@ -2,7 +2,7 @@
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="img/ELIXUER_White.svg">
     <source media="(prefers-color-scheme: light)" srcset="img/ELIXUER_White.svg">
-    <img alt="Descripción de la imagen" src="ruta/imagen-modo-claro.png">
+    <img alt="Descripción de la imagen" src="img/ELIXUER_White.svg">
   </picture>
 </div>
 #
