@@ -1,5 +1,10 @@
-<div align = "center"> <img src="img/ELIXUER_White.svg" > </div>
-
+<div align = "center"> 
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="img/ELIXUER_White.svg">
+    <source media="(prefers-color-scheme: light)" srcset="img/ELIXUER_White.svg">
+    <img alt="Descripción de la imagen" src="ruta/imagen-modo-claro.png">
+  </picture>
+</div>
 #
 
 <strong>Sobre:</strong> Venta de perfumes y fragancias
