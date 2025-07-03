@@ -5,6 +5,7 @@
     <img alt="Descripción de la imagen" src="img/ELIXUER_White.svg">
   </picture>
 </div>
+
 #
 
 <strong>Sobre:</strong> Venta de perfumes y fragancias
