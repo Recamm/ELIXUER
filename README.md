@@ -15,3 +15,6 @@
 <strong>Inspiration:</strong>
 [perfumeriasrouge](https://www.perfumeriasrouge.com/)
 [ruizyrocaperfumeria](https://www.ruizyrocaperfumeria.com/)
+
+<strong>Figma</strong>
+[Link](https://www.figma.com/proto/kLz6tWYq6aRsPc04nmWNnK/ELIXUER?node-id=0-1&t=cykGjw4b5Op6Z2hO-1)
