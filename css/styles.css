@@ -6,6 +6,7 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: var(--ff);
 }
 
 /* HEADER */
@@ -13,64 +14,4 @@ header {
     width: 100vw;
     font-family: var(--ff);
     font-size: var(--fSize);
-}
-
-.topNavbar {
-    width: 100%;
-    height: 65px;
-
-    display: flex;
-    justify-content: center;
-    padding: 1% 0;
-    box-shadow: 0 9px 9px -9px rgb(33 35 38 / 10%);
-}
-
-.topNavbar .LogoIMG {
-    height: 100%;
-}
-
-.botNavbar {
-    width: 100%;
-    margin: 1.5% 0;
-    display: flex;
-    justify-content: center;
-}
-
-.botNavbar .opcionesNavbar {
-    display: flex;
-    list-style: none;
-    padding: 0;
-    width: 40%;
-    justify-content: space-between;
-}
-.botNavbar .opcionesNavbar li{
-    opacity: 70%;
-}
-.botNavbar .opcionesNavbar li a{
-    text-decoration: none;
-    color: black;
-}
-
-/* MAIN */
-
-.carouselEditar {
-    height: 500px;
-    overflow: hidden;
-}
-
-.carouselItemEditar {
-    height: 100%;
-    object-fit: cover;
-
-    position: relative;
-}
-
-.carouselItemEditar img {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-}
-.colEditar img{
-    width: 100%;
 }
