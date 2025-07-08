@@ -1,17 +1,45 @@
 :root {
-    --ff: "DM Sans", sans-serif;
-    --fSize: 17px;
+    --web-font-family: "DM Sans", sans-serif;
+    --text-color-default: #000000;
+    --title-Big: 60px;
+    --title-Medium: 45px;
+    --title-Small: 30px;
+    --text-medium: 20px;
 }
 
 * {
     margin: 0;
     padding: 0;
-    font-family: var(--ff);
+    font-family: var(--web-font-family);
+    color: var(--text-color-default);
 }
 
 /* HEADER */
 header {
     width: 100vw;
     font-family: var(--ff);
-    font-size: var(--fSize);
+    font-size: var(--text-medium);
+    display: flex;
+    justify-items: center;
 }
+
+.Navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    background-color: red;
+}
+
+.Navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+.Navbar li a {
+    color: var(--text-color-default);
+    text-decoration: none;
+}
+
+.
