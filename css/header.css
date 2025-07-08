@@ -1,0 +1,103 @@
+:root {
+    --web-font-family: "DM Sans", sans-serif;
+    --text-color-default: #000000;
+    --white: #ffffff;
+    --title-Big: 60px;
+    --title-Medium: 45px;
+    --title-Small: 30px;
+    --text-medium: 20px;
+    --text-small: 15px;
+    --padding-web: 150px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: var(--web-font-family);
+    color: var(--text-color-default);
+}
+
+/* HEADER */
+header {
+    width: 100vw;
+    display: flex;
+    justify-items: center;
+}
+
+.Navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    width: 100%;
+    height: 80px;
+    padding: 0 var(--padding-web);
+
+    background-color: red;
+}
+
+.Navbar .LogoIMG {
+    height: 45%;
+}
+
+.Navbar i {
+    color: var(--text-color-default);
+    font-size: var(--text-medium);
+}
+
+.Navbar i:hover {
+    cursor: pointer;
+}
+
+/* Side Menu base */
+.side-menu {
+  position: fixed;
+  top: 0;
+  left: -300px; /* oculto inicialmente */
+  width: 300px;
+  height: 100%;
+  background-color: var(--white); /* fondo oscuro, cámbialo si querés */
+  color: var(--text-color-default);
+  padding-top: 80px;
+  transition: left 0.3s ease;
+  z-index: 999; /* sobre otros elementos */
+}
+
+/* Mostrar menú */
+.side-menu.active {
+  left: 0;
+}
+
+/* Botón de cerrar */
+.side-menu .bx-x {
+  position: absolute;
+  top: 27px;
+  right: 27px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Items de menú */
+.side-menu ul {
+  list-style: none;
+  padding: 0;
+
+  display: flex;
+  flex-direction: column;
+  padding:  40px;
+}
+
+.side-menu ul li {
+  padding: 15px 0;
+}
+
+.side-menu ul li a {
+  color: var(--text-color-default);
+  text-decoration: none;
+  font-size: 18px;
+}
+
+/* .side-menu ul li a:hover {
+  background-color: #333;
+  display: block;
+} */

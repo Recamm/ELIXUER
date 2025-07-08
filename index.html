@@ -3,34 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
-    <title>ELIXUER</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <title>ELIXUER</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <header>
       <div class="Navbar">
+          <i class='bx bx-menu' id="menu-icon"></i>
           <img class="LogoIMG" src="img/ELIXUER.svg" alt="Logo ELIXUER">
-          <ul class="opcionesNavbar">
-              <li><a href="">Productos</a></li>
-              <li><a href="">Promociones</a></li>
-              <li><a href="">Marcas</a></li>
-              <li><a href="">Contacto</a></li>
-          </ul>
-          <div>
-            <img src="/img/icons/bag.svg" alt="cart">
-            <img src="/img/icons/person.svg" alt="account">
-          </div>
-        </div>
+          <i class='pointer bx bx-search searchButton'></i>
+      </div>
+      <nav id="side-menu" class="side-menu">
+        <i class='bx bx-x' id="close-menu"></i>
+        <ul>
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#">Productos</a></li>
+          <li><a href="#">Promociones</a></li>
+          <li><a href="#">Contacto</a></li>
+        </ul>
+      </nav>
     </header>
     
     <main>
 
     </main>
     
-    <footer></footer>
+    <footer>
+      
+    </footer>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    <script src="js/menuDesplegableHeader.js"></script>
 
 </body>
 </html>
