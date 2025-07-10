@@ -33,7 +33,7 @@ header {
     height: 80px;
     padding: 0 var(--padding-web);
 
-    background-color: red;
+    background-color: var(--white);
 }
 
 .Navbar .LogoIMG {
@@ -75,6 +75,17 @@ header {
   right: 27px;
   font-size: 24px;
   cursor: pointer;
+  transition: transform 0.5s;
+}
+
+.side-menu .bx-x:hover {
+  transform: rotate(90deg);
+}
+
+.side-menu hr {
+  margin: 0;
+  color: var(--text-color-default);
+  filter: opacity(0.3);
 }
 
 /* Items de menú */
@@ -95,9 +106,24 @@ header {
   color: var(--text-color-default);
   text-decoration: none;
   font-size: 18px;
+  display: inline-block;
+  padding: 0 20px;
 }
 
 /* .side-menu ul li a:hover {
   background-color: #333;
   display: block;
 } */
+
+.lineaAnimacion::after {
+  content: "";
+  height: 2px;
+  width: 0px;
+  background-color: var(--text-color-default);
+  display: block;
+  transition: all 300ms;  
+}
+
+.lineaAnimacion:hover::after{
+  width: 100%;
+}

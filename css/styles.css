@@ -17,3 +17,17 @@
 }
 
 /* MAIN */
+
+.carouselBox {
+    height: 500px;
+    overflow: hidden;
+}
+
+.itemCarosuel {
+    height: 100%;
+}
+
+.carouselBox .itemCarosuel img {
+    height: 100%;
+    object-fit: cover;
+}
