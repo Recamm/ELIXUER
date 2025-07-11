@@ -6,25 +6,33 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
     <title>ELIXUER</title>
+    <link rel="stylesheet" href="css/animaciones.css  ">
+    <link rel="stylesheet" href="css/defautlValues.css">
     <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <header>
       <div class="Navbar">
           <i class='bx bx-menu' id="menu-icon"></i>
-          <img class="LogoIMG" src="img/ELIXUER.svg" alt="Logo ELIXUER">
+          <a href="index.html" class="logoLink">
+            <img class="LogoIMG" src="img/ELIXUER.svg" alt="Logo ELIXUER">
+          </a>
           <i class='pointer bx bx-search searchButton'></i>
       </div>
       <nav id="side-menu" class="side-menu">
         <i class='bx bx-x' id="close-menu"></i>
         <hr>
-        <ul>
-          <li><a href="#" class="lineaAnimacion">Inicio</a></li>
-          <li><a href="#" class="lineaAnimacion">Productos</a></li>
-          <li><a href="#" class="lineaAnimacion">Promociones</a></li>
-          <li><a href="#" class="lineaAnimacion">Contacto</a></li>
-        </ul>
+        <div class="content">
+          <ul>
+            <li><a href="index.html" class="lineaAnimacion">Inicio</a></li>
+            <li><a href="listadoProducto.html" class="lineaAnimacion">Productos</a></li>
+            <li><a href="listadoProducto.html" class="lineaAnimacion">Promociones</a></li>
+            <li><a href="#" class="lineaAnimacion">Contacto</a></li>
+          </ul>
+          <p><a href="#" class="itemInferiorMenu lineaAnimacion">Mi cuenta</a></p>
+        </div>
       </nav>
     </header>
     
@@ -59,23 +67,31 @@
         </div>
   
         <section class="Categoria">
-          <h1 class="tituloCategoria">Marca</h1>
+          <h1 class="tituloCategoria">Marcas</h1>
           <div class="contenido">
             <div class="item">
-              <p>GUCCI</p>
-              <img src="/img/marcas/gucci.png" alt="">
+              <a href="listadoProducto.html" class="itemLink">
+                <p>GUCCI</p>
+                <img src="/img/marcas/gucci.png" alt="">
+              </a>
             </div>
             <div class="item">
-              <p>ARMANI</p>
-              <img src="/img/marcas/armani.jpg" alt="">
+              <a href="listadoProducto.html" class="itemLink">
+                <p>ARMANI</p>
+                <img src="/img/marcas/armani.jpg" alt="">
+              </a>
             </div>
             <div class="item">
-              <p>Carolina Herrera</p>
-              <img src="/img/marcas/chhe.jpg" alt="">
+              <a href="listadoProducto.html" class="itemLink">
+                <p>Carolina Herrera</p>
+                <img src="/img/marcas/chhe.jpg" alt="">
+              </a>
             </div>
             <div class="item">
-              <p>Louis Vuitton</p>
-              <img src="/img/marcas/lv.svg" alt="">
+              <a href="listadoProducto.html" class="itemLink">
+                <p>Louis Vuitton</p>
+                <img src="/img/marcas/lv.svg" alt="">
+              </a>
             </div>
           </div>
         </section>
@@ -84,7 +100,26 @@
     </main>
     
     <footer>
-      
+      <div class="topFooter">
+        <div class="imgSocial">
+          <img src="img/ELIXUER_White.svg" alt="ELIXUER Logo" class="footerLogo">
+          <div class="footerSocial">
+            <a href="#" class="footerSocialLink"><i class='bx bxl-facebook'></i></a>
+            <a href="#" class="footerSocialLink"><i class='bx bxl-instagram'></i></a>
+            <a href="#" class="footerSocialLink"><i class='bx bxl-twitter'></i></a>
+            <a href="#" class="footerSocialLink"><i class='bx bxl-linkedin'></i></a>
+          </div>
+        </div>
+        <div class="footerLinks">
+          <a href="index.html" class="footerLink lineaAnimacionBlanca">Inicio</a>
+          <a href="listadoProducto.html" class="footerLink lineaAnimacionBlanca">Productos</a>
+          <a href="listadoProducto.html" class="footerLink lineaAnimacionBlanca">Promociones</a>
+          <a href="#" class="footerLink lineaAnimacionBlanca">Contacto</a>
+        </div>
+      </div>
+      <div class="botFooter">
+        <p class="footerText">© 2025 ELIXUER. Todos los derechos reservados.</p>
+      </div>
     </footer>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>

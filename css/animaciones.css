@@ -1,0 +1,27 @@
+/* ANIMACION LINEA INFERIOR */
+.lineaAnimacion::after {
+  content: "";
+  height: 1px;
+  width: 0px;
+  background-color: var(--text-color-default);
+  display: block;
+  transition: all 300ms;  
+}
+
+.lineaAnimacion:hover::after{
+  width: 100%;
+}
+
+/* ANIMACION LINEA INFERIOR */
+.lineaAnimacionBlanca::after {
+  content: "";
+  height: 1px;
+  width: 0px;
+  background-color: var(--white);
+  display: block;
+  transition: all 300ms;  
+}
+
+.lineaAnimacionBlanca:hover::after{
+  width: 100%;
+}
