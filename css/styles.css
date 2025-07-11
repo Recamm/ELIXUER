@@ -6,7 +6,10 @@
     --title-Small: 30px;
     --text-medium: 20px;
     --text-small: 15px;
-    --padding-web: 150px;
+    --title-weight: 500;
+    --text-weight: 300;
+
+    --margin-web: 150px;
 }
 
 * {
@@ -17,7 +20,17 @@
 }
 
 /* MAIN */
+main {
+    width: 100vw;
+    font-family: var(--web-font-family);
+}
 
+.separacionBordes {
+    /* margin: 0 var(--margin-web); */
+    width: 100%;
+}
+
+/* carousel */
 .carouselBox {
     height: 500px;
     overflow: hidden;
@@ -30,4 +43,51 @@
 .carouselBox .itemCarosuel img {
     height: 100%;
     object-fit: cover;
+}
+
+/* marcas items */
+.Categoria {
+    margin: 30px var(--margin-web);
+}
+
+.tituloCategoria {
+    font-family: var(--web-font-family);
+    font-weight: var(--title-weight);
+}
+
+.contenido {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    margin: var(--padding-web);
+    gap: 20px;
+}
+
+.item {
+    height: 300px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+}
+
+.item img{
+    position: relative;
+    transition: height 0.5s;
+    height: 75%;
+}
+
+.item:hover img {
+    height: 68%;
+}
+
+.item:hover {
+    cursor: pointer;
+}
+
+.item p {
+    position: absolute;
+    display: none;
 }

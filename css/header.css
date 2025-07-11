@@ -7,7 +7,7 @@
     --title-Small: 30px;
     --text-medium: 20px;
     --text-small: 15px;
-    --padding-web: 150px;
+    --margin-web: 150px;
 }
 
 * {
@@ -31,7 +31,7 @@ header {
     
     width: 100%;
     height: 80px;
-    padding: 0 var(--padding-web);
+    padding: 0 var(--margin-web);
 
     background-color: var(--white);
 }
