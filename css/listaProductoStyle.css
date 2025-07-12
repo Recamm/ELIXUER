@@ -57,6 +57,10 @@ main {
     height: 100%;
 }
 
+.direccionamientoProducto {
+    text-decoration: none;
+}
+
 /* TOP ITEM */
 
 .itemGrid .img{
