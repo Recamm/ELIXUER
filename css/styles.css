@@ -23,16 +23,17 @@ main {
 
 /* carousel */
 .carouselBox {
-    height: 80vh;
+    width: 100%;
     overflow: hidden;
+    /* max-height: calc(100vh - var(--header-height)); */
 }
 
 .itemCarosuel {
-    height: 100%;
+    width: 100%;
 }
 
 .carouselBox .itemCarosuel img {
-    height: 100%;
+    width: 100%;
     object-fit: cover;
 }
 
@@ -74,10 +75,11 @@ main {
     max-height: 72%;
     width: 100%;
     padding: 20px;
+    transition: 0.1s;
 }
 
 .item:hover img {
-    height: 70%;
+    max-height: 70%;
 }
 
 .item:hover {
