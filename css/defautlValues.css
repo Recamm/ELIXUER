@@ -8,13 +8,14 @@
     --shadow: rgba(0, 0, 0, 0.2);
 
     --title-Big: 45px;
-    --title-Medium: 35px;
+    --title-Medium: 30px;
     --title-Small: 25px;
     --text-medium: 20px;
     --text-small: 15px;
-    --title-weight-more: 600;
+    --title-weight-bold: 600;
     --title-weight: 500;
     --text-weight: 400;
+    --text-weight-light: 300;
 
     --margin-web: 150px;
     --header-height: 80px;
