@@ -11,8 +11,8 @@ main {
 
 /* Texto introduccion */
 .centrarCategoria {
-    margin-top: 150px;
     width: 100%;
+    margin-top: 150px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -40,7 +40,7 @@ main {
 /* GRID */
 .grid{
     display: grid;
-    grid-template-columns: repeat(4, 25%);
+    grid-template-columns: repeat(4, 1fr);
     margin: 5% var(--margin-web);
 }
 
@@ -91,7 +91,8 @@ main {
 }
 
 .img img {
-    height: 80%;
+    /* height: 80%; */
+    width: 100%;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -139,4 +140,33 @@ main {
 
 .itemGrid:hover .comprarBoton {
     opacity: 0.6;
+}
+
+/* Response */
+
+@media (max-width: 1280px) {
+    .grid{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .infoCategoria {
+        width: calc(100% - 2*var(--margin-web));
+    }
+}
+
+@media (max-width: 1024px) {
+    .grid{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .bot .nombreProducto,
+    .bot .marcaProducto,
+    .bot .precioProducto,
+    .bot .comprarBoton {
+        font-size: var(--text-small);
+    }
+}
+
+@media (max-width: 640px) {
+    .grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
 }

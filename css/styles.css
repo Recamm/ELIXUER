@@ -50,7 +50,7 @@ main {
 .contenido {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(4, 25%);
+    grid-template-columns: repeat(4, 1fr);
     margin: var(--padding-web);
     gap: 20px;
 }
@@ -71,7 +71,8 @@ main {
 .item img{
     position: relative;
     transition: height 0.25s;
-    height: 72%;
+    max-height: 72%;
+    width: 100%;
     padding: 20px;
 }
 
@@ -119,4 +120,13 @@ main {
     display: flex;
     justify-self: center;
     align-items: center;
+}
+
+
+/* Response */
+
+@media (max-width: 1024px) {
+    .contenido {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }

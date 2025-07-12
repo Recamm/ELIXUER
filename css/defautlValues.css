@@ -20,3 +20,17 @@
     --margin-web: 150px;
     --header-height: 80px;
 }
+
+/* Response */
+
+@media (max-width: 1024px) {
+    :root {
+        --margin-web: 50px;
+    }
+}
+
+@media (max-width: 640px) {
+    :root {
+        --margin-web: 10px;
+    }
+}

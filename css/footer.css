@@ -29,6 +29,10 @@ footer {
     gap: 40px;
 }
 
+.footerLogo {
+    width: 250px;
+}
+
 .footerSocial {
     display: flex;
     justify-content: space-evenly;
@@ -62,4 +66,12 @@ footer {
 .botFooter .footerText {
     color: var(--white);
     filter: opacity(0.6);
+}
+
+/* Response */
+
+@media (max-width: 640px) {
+    .footerLogo {
+        width: 150px;
+    }
 }
