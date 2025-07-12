@@ -6,8 +6,10 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
     <title>ELIXUER</title>
-    <link rel="stylesheet" href="css/animaciones.css  ">
+    <link rel="icon" href="img/e-icon-black.png" type="image/png" media="(prefers-color-scheme: light)">
+    <link rel="icon" href="img/e-icon-white.png" type="image/png" media="(prefers-color-scheme: dark)">
     <link rel="stylesheet" href="css/defautlValues.css">
+    <link rel="stylesheet" href="css/animaciones.css  ">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/styles.css">
@@ -21,6 +23,7 @@
           </a>
           <i class='pointer bx bx-search searchButton'></i>
       </div>
+      <div class="background-menu" id="background-menu"></div>
       <nav id="side-menu" class="side-menu">
         <i class='bx bx-x' id="close-menu"></i>
         <hr>
@@ -37,9 +40,9 @@
     </header>
     
     <main>
-      <div class="separacionBordes">
+      <div class="main">
 
-        <div id="carouselExampleIndicators" class="carousel slide">
+        <div id="carouselExampleIndicators" class="carousel slide carouselCompleto">
           <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -71,25 +74,33 @@
           <div class="contenido">
             <div class="item">
               <a href="listadoProducto.html" class="itemLink">
-                <p>GUCCI</p>
+                <div class="centrarInIMG">
+                  <p>GUCCI</p>
+                </div>
                 <img src="/img/marcas/gucci.png" alt="">
               </a>
             </div>
             <div class="item">
               <a href="listadoProducto.html" class="itemLink">
-                <p>ARMANI</p>
-                <img src="/img/marcas/armani.jpg" alt="">
+                <div class="centrarInIMG">
+                  <p>ARMANI</p>
+                </div>
+                <img src="/img/marcas/armani.png" alt="">
               </a>
             </div>
             <div class="item">
               <a href="listadoProducto.html" class="itemLink">
-                <p>Carolina Herrera</p>
-                <img src="/img/marcas/chhe.jpg" alt="">
+                <div class="centrarInIMG">
+                  <p>Carolina Herrera</p>
+                </div>
+                <img src="/img/marcas/carolinaherrera.png" alt="">
               </a>
             </div>
             <div class="item">
               <a href="listadoProducto.html" class="itemLink">
-                <p>Louis Vuitton</p>
+                <div class="centrarInIMG">
+                  <p>Louis Vuitton</p>
+                </div>
                 <img src="/img/marcas/lv.svg" alt="">
               </a>
             </div>
@@ -104,22 +115,22 @@
         <div class="imgSocial">
           <img src="img/ELIXUER_White.svg" alt="ELIXUER Logo" class="footerLogo">
           <div class="footerSocial">
-            <a href="#" class="footerSocialLink"><i class='bx bxl-facebook'></i></a>
-            <a href="#" class="footerSocialLink"><i class='bx bxl-instagram'></i></a>
-            <a href="#" class="footerSocialLink"><i class='bx bxl-twitter'></i></a>
-            <a href="#" class="footerSocialLink"><i class='bx bxl-linkedin'></i></a>
+            <a href="#" class="footerSocialLink lineaAnimacionBlanca"><i class='bx bxl-facebook'></i></a>
+            <a href="#" class="footerSocialLink lineaAnimacionBlanca"><i class='bx bxl-instagram'></i></a>
+            <a href="#" class="footerSocialLink lineaAnimacionBlanca"><i class='bx bxl-twitter'></i></a>
+            <a href="#" class="footerSocialLink lineaAnimacionBlanca"><i class='bx bxl-linkedin'></i></a>
           </div>
         </div>
         <div class="footerLinks">
-          <a href="index.html" class="footerLink lineaAnimacionBlanca">Inicio</a>
-          <a href="listadoProducto.html" class="footerLink lineaAnimacionBlanca">Productos</a>
-          <a href="listadoProducto.html" class="footerLink lineaAnimacionBlanca">Promociones</a>
-          <a href="#" class="footerLink lineaAnimacionBlanca">Contacto</a>
+          <p><a href="index.html" class="footerLink lineaAnimacionBlanca">Inicio</a></p>
+          <p><a href="listadoProducto.html" class="footerLink lineaAnimacionBlanca">Productos</a></p>
+          <p><a href="listadoProducto.html" class="footerLink lineaAnimacionBlanca">Promociones</a></p>
+          <p><a href="#" class="footerLink lineaAnimacionBlanca">Contacto</a></p>
         </div>
       </div>
-      <div class="botFooter">
+      <!-- <div class="botFooter">
         <p class="footerText">© 2025 ELIXUER. Todos los derechos reservados.</p>
-      </div>
+      </div> -->
     </footer>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>

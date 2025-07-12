@@ -1,21 +1,17 @@
-:root {
-    --web-font-family: "DM Sans", sans-serif;
-    --text-color-default: #000000;
-    --title-Big: 60px;
-    --title-Medium: 45px;
-    --title-Small: 30px;
-    --text-medium: 20px;
-    --text-small: 15px;
-    --padding-web: 150px;
-}
 * {
     margin: 0;
     padding: 0;
-    font-family: var(--ff);
+    font-family: var(--web-font-family);
+    color: var(--text-color-default);
+}
+
+main {
+    margin-top: var(--header-height);
 }
 
 /* Texto introduccion */
 .centrarCategoria {
+    margin-top: 150px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -27,38 +23,47 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 10px;
 }
-.tituloIntroduccion{
-    font-family: var(--web-font-family);
-    font-weight: 175;
-    font-size: var(--title-Small);
-    color: var(--text-color-default);
+
+.tituloCategoria{
+    font-weight: var(--title-weight);
+    font-size: var(--title-Medium);
 }
-.textoIntroduccion{
-    font-family: var(--web-font-family);
-    font-size: var(--fSize);
+
+.textoCategoria {
+    font-size: var(--text-small);
+    font-weight: var(--text-weight);
     text-align: center;
-    font-weight: 50;
 }
 
 /* GRID */
 .grid{
     display: grid;
     grid-template-columns: repeat(4, 25%);
-    margin: 5% var(--padding-web);
+    margin: 5% var(--margin-web);
 }
 
 .itemGrid{
     width: 100%;
-    position: relative; 
-}
-.itemGrid .img{
-    width: 100%;
-    height: 300px;
 }
 
-.itemGrid:hover img {
-    opacity: 0;
+.itemGrid:hover {
+    cursor: pointer;
+}
+
+.itemGridLink {
+    width: 100%;
+    height: 100%;
+}
+
+/* TOP ITEM */
+
+.itemGrid .img{
+    position: relative; 
+    width: 100%;
+    height: 450px;
+    overflow: hidden;
 }
 
 .imgDefault {
@@ -82,90 +87,52 @@
 }
 
 .img img {
+    height: 80%;
     position: absolute;
-    width: 100%;
-    top: 0;
-    left: 0;
-    transition: transform 0.75s ease, filter 0.75s ease, opacity 0.5s ease; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.5s; 
     object-fit: cover;
 }
 
-/* Parte de abajo */
-.bot .nombreProducto{
-    margin-top: 2%;
-    font-size: var(--text-small);
-    font-family: var(--web-font-family);
-}
-.bot .marcaProducto{
-    margin-top: 2%;
-    font-size: var(--text-small);
-    font-family: var(--web-font-family);
+/* BOT ITEM */
 
-}
-.bot .precioProducto{
-    margin-top: 2%;
-    font-size: var(--text-small);
-    font-family: var(--web-font-family);
-}
-.bot .comprarBoton{
-    margin-top: 3%;
-    text-decoration: none;
-    color: var(--text-color-default);
-    font-size: var(--text-small);
-    transition: opacity 0.5s ease;
-    opacity: 0;
-}
-.itemGrid:hover .bot .comprarBoton   {
-    margin-top: 3%;
-    text-decoration: none;
-    color: var(--text-color-default);
-    font-size: var(--text-small);
-    transition: opacity 0.5s ease;
-    opacity: 1;
-}
-.bot .comprarBoton {
-    position: relative;
-    display: inline-block;
-    margin-top: 3%;
-    text-decoration: none;
-    color: var(--text-color-default);
-    font-size: var(--text-small);
-    font-family: var(--web-font-family);
-    opacity: 0;
-    transition: opacity 0.5s ease;
-}
-
-/* Aparecer con opacidad */
-.itemGrid:hover .bot .comprarBoton {
-    opacity: 1;
-}
-
-/* Línea/borde inferior invisible por defecto */
-.bot .comprarBoton::after {
-    content: "";
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    height: 1px;
-    margin-left: 37.5%;
-    width: 25%;
-    background-color: var(--text-color-default);
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.5s ease;
-}
-
-/* Al hacer hover en .itemGrid, también aparece el "borde" */
-.itemGrid:hover .bot .comprarBoton::after {
-    transform: scaleX(1);
-}
-
-.bot{
-    width: 100%;
-    height: 100px;
-    display: flex;;
+.bot {
+    display: flex;
     flex-direction: column;
-    text-align: center;
-    
+    align-items: center;
+    gap: 17px;
+    padding: 15px 0;
+}
 
+.bot .descripcion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.bot .nombreProducto {
+    font-size: var(--text-medium);
+    font-weight: var(--title-weight);
+}
+
+.bot .marcaProducto,
+.bot .precioProducto {
+    font-size: var(--text-medium);
+    font-weight: var(--text-weight);
+    opacity: 0.6;
+}
+
+.bot .comprarBoton {
+    font-size: var(--text-medium);
+    font-weight: var(--text-weight);
+    text-decoration: none;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.itemGrid:hover .comprarBoton {
+    opacity: 0.6;
 }
