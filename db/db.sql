@@ -34,7 +34,6 @@ create table marca (
 
 create table oferta (
 	id int not null auto_increment,
-    precio int not null, -- Precio con descuento aplicado
     descuento int not null, -- En porcentaje
     primary key (id)
 );
@@ -43,6 +42,7 @@ create table producto (
 	id int not null auto_increment,
 	nombre varchar(255) not null,
     descripcion varchar(255) not null,
+    precio int not null,
     idCategoria int not null,
     idOferta int not null,
     idMarca int not null,
