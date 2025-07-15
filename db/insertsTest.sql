@@ -1,3 +1,5 @@
+use ELIXUER;
+
 INSERT INTO usuario (nombre, contrasenia, fecha_nacimiento) VALUES
 ('Camilo', '1234segura', '1998-04-12'),
 ('Laura', 'passlaura', '2000-06-25'),

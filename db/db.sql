@@ -14,6 +14,7 @@ create table contactUs (
     nombre varchar(45) not null,
     apellido varchar(45) not null,
     email varchar(45) not null,
+    mensaje varchar(255) not null,
     fecha_de_creacion datetime not null,
     primary key (id)
 );
