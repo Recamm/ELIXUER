@@ -51,7 +51,7 @@ main {
 .contenido {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     margin: var(--padding-web);
     gap: 20px;
 }
@@ -76,6 +76,12 @@ main {
     width: 100%;
     padding: 20px;
     transition: 0.1s;
+}
+
+.item .itemLink {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .item:hover img {
@@ -126,9 +132,24 @@ main {
 
 
 /* Response */
+@media (max-width: 1280px) {
+    .contenido {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
 
 @media (max-width: 1024px) {
     .contenido {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+
+@media (max-width: 768px) {
+    .contenido {
         grid-template-columns: repeat(2, 1fr);
+    }
+    .item img{
+        max-width: 85%;
     }
 }
