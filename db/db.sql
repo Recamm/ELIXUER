@@ -19,12 +19,12 @@ create table contactUs (
     primary key (id)
 );
 
-create table categoria (
-	id int not null auto_increment,
-    nombre varchar(45) not null,
-    descripcion varchar(255),
-    primary key (id)
-);
+-- create table categoria (
+-- 	id int not null auto_increment,
+--     nombre varchar(45) not null,
+--     descripcion varchar(255),
+--     primary key (id)
+-- );
 
 create table marca (
     id int not null auto_increment,
@@ -38,10 +38,17 @@ create table oferta (
     primary key (id)
 );
 
+create table acordes (
+    id int not null auto_increment,
+    nombre varchar(45) not null,
+    primary key (id)
+);
+
 create table producto (
 	id int not null auto_increment,
 	nombre varchar(255) not null,
     descripcion varchar(255) not null,
+    especificaciones varchar(255) not null,
     precio int not null,
     idCategoria int not null,
     idOferta int not null,
@@ -50,6 +57,14 @@ create table producto (
     foreign key (idCategoria) references categoria(id),
     foreign key (idOferta) references oferta(id),
     foreign key (idMarca) references marca(id)
+);
+
+create table productoAcordes (
+    id int not null auto_increment,
+    idProducto int not null,
+    idAcorde int not null,
+    foreign key (idProducto) references producto(id),
+    foreign key (idAcorde) references acorde(id)
 );
 
 create table carrito (
