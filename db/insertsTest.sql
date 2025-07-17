@@ -52,6 +52,24 @@ insert into producto (nombre, descripcion, especificaciones, precio, idOferta, i
 ('Oud Wood', 'Perfume lujoso con oud.', 'Oud Wood de Tom Ford mezcla oud, palo de rosa, sándalo, vetiver y ámbar, creando un aroma oriental amaderado intenso.', 210, 2, 7),
 ('Invictus', 'Perfume fresco y deportivo.', 'Invictus de Paco Rabanne combina toronja, laurel, ámbar gris y madera de gaiac, logrando un perfume fresco con carácter ganador.', 115, 3, 3);
 
+-- insert into producto (nombre, descripcion, especificaciones, precio, idMarca) values
+-- ('Sauvage Dior', 'Perfume masculino intenso con notas frescas.', 'Sauvage de Dior es un perfume masculino inspirado en espacios abiertos. Combina bergamota de Calabria con ambroxan, notas frescas y amaderadas que generan un aroma elegante, salvaje y duradero en la piel.', 120, 1),
+-- ('Bleu de Chanel', 'Fragancia elegante y misteriosa para hombres.', 'Bleu de Chanel es una fragancia amaderada aromática con notas de toronja, incienso, jengibre y sándalo. Ideal para el hombre moderno que busca sofisticación y frescura durante todo el día.', 150, 2),
+-- ('1 Million', 'Perfume dulce y llamativo para hombres.', '1 Million de Paco Rabanne tiene notas de menta, canela, cuero y ámbar. Es un perfume dulce y cálido, perfecto para la noche, con gran proyección y duración.', 110, 3),
+-- ('Eros', 'Perfume fresco y seductor.', 'Versace Eros combina menta, manzana verde, vainilla y cedro, creando una fragancia vibrante y sensual ideal para climas cálidos y salidas nocturnas.', 105, 4),
+-- ('Acqua di Gio', 'Perfume fresco y marino.', 'Acqua di Gio de Armani mezcla notas de lima, jazmín, bergamota y cedro, evocando brisas marinas. Es un aroma clásico, fresco y versátil.', 95, 5),
+-- ('Good Girl', 'Perfume femenino dulce y elegante.', 'Good Girl de Carolina Herrera es un perfume femenino con notas de almendra, café, jazmín sambac y cacao. Un aroma dulce, cálido y poderoso.', 135, 6),
+-- ('Black Orchid', 'Perfume intenso y lujoso.', 'Black Orchid de Tom Ford presenta notas de trufa, chocolate oscuro, incienso y orquídea negra, creando un aroma oscuro y elegante, ideal para noches especiales.', 180, 7),
+-- ('Y Eau de Parfum', 'Fragancia masculina fresca y moderna.', 'Y de Yves Saint Laurent combina bergamota, jengibre, manzana y almizcle. Es un perfume fresco con un toque amaderado, ideal para el día a día.', 140, 8),
+-- ('Mr. Burberry', 'Fragancia masculina amaderada aromática.', 'Mr. Burberry tiene notas de pomelo, estragón, madera de guayaco y vetiver. Es un perfume elegante y masculino.', 100, 9),
+-- ('Gentleman', 'Perfume masculino elegante y dulce.', 'Gentleman de Givenchy presenta notas de pera, lavanda, iris y vainilla negra, logrando un aroma cálido, dulce y sofisticado.', 145, 10),
+-- ('Libre', 'Perfume femenino floral y fresco.', 'Libre de Yves Saint Laurent tiene notas de lavanda, mandarina, jazmín y vainilla, creando un aroma floral intenso y elegante.', 130, 8),
+-- ('L’Interdit', 'Perfume femenino dulce y floral.', 'L’Interdit de Givenchy mezcla nardo, flor de azahar y pachuli, generando un aroma elegante y sofisticado para ocasiones especiales.', 125, 10),
+-- ('Code Absolu', 'Perfume cálido y especiado.', 'Armani Code Absolu presenta notas de mandarina verde, cardamomo, haba tonka y madera de cedro, ideal para climas fríos y noches.', 160, 5),
+-- ('Oud Wood', 'Perfume lujoso con oud.', 'Oud Wood de Tom Ford mezcla oud, palo de rosa, sándalo, vetiver y ámbar, creando un aroma oriental amaderado intenso.', 210, 7),
+-- ('Invictus', 'Perfume fresco y deportivo.', 'Invictus de Paco Rabanne combina toronja, laurel, ámbar gris y madera de gaiac, logrando un perfume fresco con carácter ganador.', 115, 3);
+
+
 insert into producto (nombre, descripcion, especificaciones, precio, idOferta, idMarca) values
 ('L’Homme Ideal', 'Perfume masculino dulce y elegante.', 'L’Homme Ideal de Guerlain combina almendra, cuero y vainilla, creando un aroma sofisticado y cálido para hombres con clase.', 135, 1, 2),
 ('Aventus', 'Perfume masculino frutal y amaderado.', 'Aventus de Creed tiene notas de piña, bergamota, almizcle y musgo de roble. Es un aroma elegante, fuerte y duradero.', 350, 2, 4),

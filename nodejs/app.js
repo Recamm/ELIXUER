@@ -132,6 +132,30 @@ app.get('/api/productos', (req, res) => {
   });
 });
 
+app.get('/sobrenosotros', (req, res) => {
+  res.sendFile(path.join(__dirname, '..', 'aboutUs.html'));
+});
+
+app.get('/descuentos', (req, res) => {
+  res.sendFile(path.join(__dirname, '..', 'listadoProducto.html'));
+});
+
+app.get('/api/descuentos', (req, res) => {
+  const productosQuery = `
+	  SELECT * FROM producto
+    JOIN oferta on producto.idOferta = oferta.id
+  `;
+  db.query(productosQuery, (err, productosResult) => {
+    if (err) {
+      return res.status(500).json({ error: 'Error al obtener los productos' });
+    }
+
+    res.json({
+      productos: productosResult
+    });
+  });
+});
+
 app.listen(PORT, () => {
   console.log(`Servidor corriendo en http://localhost:${PORT}`);
 });

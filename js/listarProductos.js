@@ -1,23 +1,50 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Obtener id de la categoría de la URL
-  const urlParts = window.location.pathname.split('/');
-  const marcaId = urlParts[urlParts.length - 1];
+  const path = window.location.pathname;
+  const urlParts = path.split('/').filter(Boolean); // elimina strings vacíos
+  let apiUrl = '';
 
-  // Si estás accediendo como listadoProducto.html directamente sin /categoria/id,
-  // tendrías que pasar el id como parámetro ?id=1 en la URL o definir otra lógica
+  // Detectar qué endpoint usar
+  if (urlParts.includes('marca')) {
+    // Si es /api/marca/:idMarca
+    const marcaId = urlParts[urlParts.length - 1];
+    apiUrl = `/api/marca/${marcaId}`;
+  } else if (urlParts.includes('productos')) {
+    // Si es /api/productos o cualquier otro listado
+    apiUrl = `/api/productos`;
+  } else if (urlParts.includes('descuentos')) {
+    apiUrl = `/api/descuentos`
+  }
+
+  console.log(apiUrl);
   
-  // Llamada a la API
-  fetch(`/api/marca/${marcaId}`)
+  // Llamada a la API correspondiente
+  fetch(apiUrl)
     .then(res => res.json())
     .then(data => {
-      // Insertar título y descripción
-      document.querySelector('.tituloCategoria').textContent = data.marca.nombre;
-      document.querySelector('.textoCategoria').textContent = data.marca.descripcion;
-
       const grid = document.querySelector('.grid');
-      grid.innerHTML = ''; // Limpiar productos default
+      grid.innerHTML = '';
 
-      data.productos.forEach(prod => {
+      let productos = [];
+      let titulo = document.querySelector('.tituloCategoria');
+      let texto = document.querySelector('.textoCategoria');
+
+      if (data.marca) {
+        // Caso /api/marca/:idMarca → trae marca + productos
+        titulo.textContent = data.marca.nombre;
+        texto.textContent = data.marca.descripcion;
+        productos = data.productos;
+      } else if (apiUrl == `/api/descuentos`) {
+        titulo.textContent = "Promociones";
+        texto.textContent = "Explora nuestras ofertas.";
+        productos = data.productos || data; // depende cómo devuelvas los datos
+      } else {
+        // Caso /api/productos → solo lista todos
+        titulo.textContent = "Todos los productos";
+        texto.textContent = "Explora nuestro catálogo completo.";
+        productos = data.productos || data; // depende cómo devuelvas los datos
+      }
+
+      productos.forEach(prod => {
         const item = document.createElement('div');
         item.className = 'itemGrid';
         item.innerHTML = `
@@ -41,6 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
     })
     .catch(err => console.error('Error al cargar productos', err));
 });
+
 
 
 // const path = require("path");
