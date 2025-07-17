@@ -1,4 +1,3 @@
-// server.js
 const express = require('express');
 const cors = require('cors');
 const db = require('./db');
@@ -7,8 +6,12 @@ const path = require('path');
 const app = express();
 const PORT = 3000;
 
+// Modulos
+const contactRoutes = require('./module/contacto');
+
 app.use(cors());
 app.use(express.json());
+app.use(express.urlencoded({ extended: true })); // Para leer formularios
 app.use(express.static(__dirname)); // Servir archivos estáticos (HTML, CSS, JS)
 
 // Servir archivos estáticos ubicados FUERA de la carpeta "nodejs"
@@ -16,6 +19,10 @@ app.use('/css', express.static(path.join(__dirname, '../css')));
 app.use('/js', express.static(path.join(__dirname, '../js')));
 app.use('/img', express.static(path.join(__dirname, '../img')));
 
+// Modulos
+app.use('/', contactRoutes);
+
+// Cargar paginas
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '..', 'index.html'));
 });
@@ -24,6 +31,23 @@ app.get('/marca/:id', (req, res) => {
   res.sendFile(path.join(__dirname, '..', 'listadoProducto.html'));
 });
 
+app.get('/sobrenosotros', (req, res) => {
+  res.sendFile(path.join(__dirname, '..', 'aboutUs.html'));
+});
+
+app.get('/descuentos', (req, res) => {
+  res.sendFile(path.join(__dirname, '..', 'listadoProducto.html'));
+});
+
+app.get('/productos', (req, res) => {
+  res.sendFile(path.join(__dirname, '..', 'listadoProducto.html'));
+});
+
+app.get('/producto/:id', (req, res) => {
+  res.sendFile(path.join(__dirname, '..', 'producto.html'));
+});
+
+// API
 app.get('/api/marca/:id', (req, res) => {
   const marcaId = req.params.id;
 
@@ -53,12 +77,6 @@ app.get('/api/marca/:id', (req, res) => {
   });
 });
 
-app.get('/producto/:id', (req, res) => {
-  res.sendFile(path.join(__dirname, '..', 'producto.html'));
-});
-
-
-// Endpoint para obtener datos de un producto
 app.get('/api/producto/:id', (req, res) => {
   const id = req.params.id;
 
@@ -112,10 +130,6 @@ app.get('/api/marcas', (req, res) => {
   });
 });
 
-app.get('/productos', (req, res) => {
-  res.sendFile(path.join(__dirname, '..', 'listadoProducto.html'));
-});
-
 
 app.get('/api/productos', (req, res) => {
   const productosQuery = `
@@ -130,14 +144,6 @@ app.get('/api/productos', (req, res) => {
       productos: productosResult
     });
   });
-});
-
-app.get('/sobrenosotros', (req, res) => {
-  res.sendFile(path.join(__dirname, '..', 'aboutUs.html'));
-});
-
-app.get('/descuentos', (req, res) => {
-  res.sendFile(path.join(__dirname, '..', 'listadoProducto.html'));
 });
 
 app.get('/api/descuentos', (req, res) => {

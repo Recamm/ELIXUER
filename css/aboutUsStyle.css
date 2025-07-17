@@ -13,6 +13,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-bottom: 5%;
 }
 .About-us .Titulo{
     font-family: var(--web-font-family);
@@ -21,13 +22,20 @@
 .About-us .Descripcion{
     font-family: var(--web-font-family);
     font-size: var(--text-medium);
+    font-weight: var(--text-weight);
     text-align: center;
     margin: 0 calc(var(--margin-web) + 10vw);
-    padding-bottom: 2%;
     /* border-bottom: 1px solid black; */
     /* border-top: 1px solid black; */
-    padding-top: 2%;
+    /* padding-top: 2%;  */
 }
+
+.About-us .contenedorDescripcion {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
 .Contact-us{
     display: flex;
     flex-direction: column;

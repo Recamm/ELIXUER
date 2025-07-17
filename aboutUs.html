@@ -42,29 +42,36 @@
     <main>
       <div class="main">
         <div class="About-us">
-          <h1 class="Titulo">About Us</h1>
-          <h4 class="Descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio fugit, expedita voluptas consequatur, est, quas eum veniam voluptatum rerum maxime voluptatem modi illum laborum exercitationem ullam totam eveniet esse? Ratione!</h4>
+          <div class="contenedorTitulo">
+            <h1 class="Titulo">Sobre nosotros</h1>
+          </div>
+          <div class="contenedorDescripcion">
+            <p class="Descripcion">
+              En ELIXUER, creemos que un buen perfume no solo es un accesorio, sino una extensión de tu identidad. Por eso, nos dedicamos a ofrecer una experiencia de compra única para los amantes de las fragancias, combinando comodidad, calidad y un catálogo cuidadosamente seleccionado de perfumes originales para todos los gustos.
+            </p>
+            <p class="Descripcion">
+              Somos una tienda online especializada en la venta de perfumes 100% auténticos, tanto de marcas reconocidas como de nicho, para mujeres, hombres y unisex. Nos apasiona ayudarte a encontrar esa fragancia perfecta que exprese tu estilo, evoque emociones y cree recuerdos duraderos.
+            </p>
+            <p class="Descripcion">
+  Nuestra misión es hacer del lujo algo accesible, ofreciendo precios competitivos, atención personalizada y envíos rápidos a todo el país. Cada pedido es preparado con cuidado, porque sabemos que detrás de cada fragancia hay una historia, un regalo, un momento especial.
+            </p>
+          </div>
         </div>
+
         <div class="Contact-us">
-          <h1 class="Titulo">Contact Us</h1>
-          <form action="">
+          <h1 class="Titulo">Cantactanos</h1>
+          <form action="/contacto" method="post">
             <div class="Datos">
               <p class="mensaje">Escribanos</p>
-              <label>
-                <input class="input" type="text" placeholder="Nombre" required="">
-                <input class="input" type="text" placeholder="Apellido" required="">
-              </label>
-              <label>
-                <input class="input" type="email" placeholder="Email" required="">
-              </label> 
-              <label>
-                <input class="input" type="text" placeholder="Descripcion" required="">
-              </label>
-              
+                <input class="input" type="text" name="nombre" placeholder="Nombre" required="">
+                <input class="input" type="text" name="apellido" placeholder="Apellido" required="">
+                <input class="input" type="email" name="email" placeholder="Email" required="">
+                <input class="input" type="text" name="mensaje" placeholder="Descripcion" required="">              
                 <button class="submit">Submit</button>
             </div>
           </form>
         </div>
+
       </div>
     </main>
   
